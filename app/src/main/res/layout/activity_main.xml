@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@drawable/consumables"
+            android:orientation="vertical"
+            android:padding="3dp">
+            <!--TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="20sp"
+                android:textColor="#6ce1cd"
+                android:textStyle="bold"/-->
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/viewEntries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_alignParentStart="true"
+                android:text="@string/view_entries"
+                android:textColor="@color/startBlue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/buttonLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_alignParentEnd="true"
+                android:text="@string/logout"
+                android:textColor="@color/startBlue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/randomNos"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_margin="3dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text_drawable"
+                android:dropDownHeight="60dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:completionThreshold="1"
+                android:hint="enter part desc"
+                android:textColorHint="#a225a9"
+                android:inputType="textCapSentences"
+                android:paddingLeft="3dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:textColor="#2826ae"
+                android:text="Part No"
+                android:textSize="16sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/racLoc"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_margin="3dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text_drawable"
+                android:inputType="textCapCharacters"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:text="Quantity"
+                android:textColor="#2826ae"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/qty"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_margin="3dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text_drawable"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#1c258f"
+            android:onClick="onClick"
+            android:text="submit"
+            android:textColor="#dcdc52" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="amaka"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="amaka@gmail.com"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textViewGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Female"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
